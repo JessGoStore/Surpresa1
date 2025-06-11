@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Carta para o Amor 💌</title>
-  <style>
+ <style>
     html, body {
       margin: 0; padding: 0; height: 100%;
       font-family: 'Arial', sans-serif;
       background-color: #fdfdfd;
       color: #fff;
-      
     }
 
     .background-mosaic {
@@ -77,9 +76,9 @@
     .mosaic img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* mostra a imagem inteira sem cortar */
-      object-position: center top; /* opcional: alinha melhor os rostos */
-      background-color: #000; /* ou outra cor de fundo, para as "bordas" */
+      object-fit: contain;
+      object-position: center top;
+      background-color: #000;
     }
 
     #romantic-text {
@@ -91,12 +90,12 @@
     }
     .envelope-drawing.opening {
       animation: openEnvelope 0.8s forwards;
-  } 
+    }
 
-@keyframes openEnvelope {
-  0% { transform: scale(1) rotate(0deg); }
-  100% { transform: scale(1.2) rotate(15deg) translateY(-40px); opacity: 0; }
-}
+    @keyframes openEnvelope {
+      0% { transform: scale(1) rotate(0deg); }
+      100% { transform: scale(1.2) rotate(15deg) translateY(-40px); opacity: 0; }
+    }
 
     .seal {
       width: 50px;
@@ -125,12 +124,11 @@
       text-align: center;
       animation: pulse 1.5s infinite;
       z-index: 10;
-        text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-
+      text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
     }
 
     @keyframes pulse {
@@ -155,7 +153,6 @@
       z-index: 10;
       margin-top: 100px;
     }
-   
 
     h1 {
       font-size: 2.5em;
@@ -172,11 +169,6 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      .card-content { font-size: 16px; padding: 20px; }
-      .instruction { font-size: 16px; }
     }
 
     /* Botão de controle de música */
@@ -199,6 +191,89 @@
       background-color: rgba(0, 0, 0, 0.6);
       transform: scale(1.05);
     }
+
+    /* MOBILE OPTIMIZATIONS */
+    @media screen and (max-width: 768px) {
+      .background-mosaic {
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: 60px;
+      }
+      .envelope-drawing {
+        width: 150px;
+        height: 90px;
+        border-width: 3px;
+      }
+      .seal {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+      }
+      .instruction {
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 0 10px;
+      }
+      .card-content {
+        font-size: 16px;
+        padding: 20px;
+        max-width: 90vw;
+        margin-top: 60px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      #romantic-text {
+        font-size: 14px;
+      }
+      button#show-message-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+        max-width: 90vw;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .background-mosaic {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 50px;
+      }
+      .envelope-drawing {
+        width: 120px;
+        height: 75px;
+        border-width: 2px;
+      }
+      .seal {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        top: calc(50% - 17.5px);
+        left: calc(50% - 17.5px);
+      }
+      .instruction {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .card-content {
+        font-size: 14px;
+        padding: 15px;
+        max-width: 95vw;
+        margin-top: 40px;
+      }
+      h1 {
+        font-size: 1.4em;
+      }
+      #romantic-text {
+        font-size: 13px;
+      }
+      button#show-message-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        max-width: 95vw;
+      }
+    }
+
   </style>
 </head>
 <body>
